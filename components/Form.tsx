@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
+interface formProps {
+    formData: object;
+    formNewMovie: boolean;
+}
 
-const Form = ({formData, formNewMovie = true})=> {
+const Form = ({formData, formNewMovie = true}: formProps)=> {
     console.log( 'fotm data', formData);
 
     const [form, setForm] = useState({
